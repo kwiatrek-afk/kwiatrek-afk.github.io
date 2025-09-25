@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Pro', Arial, sans-serif;
+    line-height: 2.0;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: black;
+    height: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+.logo {
+    height: 120px;
+    margin-right: 20px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+    text-align: center;
+    white-space: normal;
+}
+/*Links*/
+nav ul li a {
+    text-decoration: none;
+    color: #E16E38;
+    padding: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ccc;
+}
+main {
+    padding: 20px;
+    min-height: 400px;
+}
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #E16E38;
+}
+/*Sections*/
+.feature-section {
+    margin-bottom: 40px;
+}
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feature-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.feature-content {
+    text-align: center;
+    padding: 20px;
+}
+.feature-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #234D6E;
+}
+.feature-content p {
+    margin-bottom: 20px;
+}
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-button:hover {
+    background-color: #0056b3;
+}
+/*Who We Serve*/
+.info-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 40px;
+    min-height: 400px;
+}
+.info-text {
+    grid-row: 1;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-text h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #234D6E;
+    text-align: center;
+}
+.info-images {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+}
+.info-images img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+.container {
+    width: 100%;
+    padding: 0 20px;
+}
+.cta-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+}
+/*Dynamic Screen Style*/
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    nav li {
+        border-bottom: none;
+    }
+    section {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1em;
+    }
+    #submit {
+        grid-column: 2 / 3;
+        width: 9em;
+    }
+    .content main {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    h2 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 5;
+    }
+    section {
+        grid-row: 2 / 3;
+        grid-column: auto;
+    }
+    #special {
+        grid-row: auto;
+        grid-column: 1 / 5;
+    }
+    footer {
+        grid-row: auto;
+        grid-column: 1 / 5;
+    }
+
+    /*Section 1*/
+    .feature-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .feature-image {
+        width: 50%;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .feature-content {
+        width: 50%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;  
+    }
+    .feature-content .text-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 auto;
+    }
+    /* Info section - Desktop */
+    .info-text {
+        text-align: left;
+    }
+    .info-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .info-images img {
+        max-width: 200px;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+}
