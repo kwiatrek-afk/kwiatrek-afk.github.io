@@ -76,6 +76,7 @@ footer {
     width: 100%;
     height: auto;
     max-width: 100%;
+    max-height: 400px; /* Added to limit vertical size while preserving aspect ratio */
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -148,7 +149,48 @@ footer {
     border-radius: 15px;
     overflow: hidden;
     padding: 20px;
+    text-align: center;
 }
+
+/* Form Styles - Reusing existing grid layout from media query for responsiveness */
+#contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #234D6E;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.required {
+    color: #dc3545;
+}
+
 /*Dynamic Screen Style*/
 @media (min-width: 600px) {
     nav ul {
@@ -205,6 +247,7 @@ footer {
         width: 50%;
         height: auto;
         margin-bottom: 0;
+        max-height: 400px; /* Maintains the limit on larger screens too */
     }
     .feature-content {
         width: 50%;
@@ -218,7 +261,6 @@ footer {
         justify-content: center;
         flex: 1 0 auto;
     }
-    /* Info section - Desktop */
     .info-text {
         text-align: left;
     }
@@ -235,5 +277,26 @@ footer {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 40px;
+    }
+
+    /* Form responsiveness - labels and inputs side-by-side on larger screens */
+    .form-content {
+        display: contents; /* Allows the form's grid to take over */
+    }
+
+    #contact-form label {
+        grid-column: 1;
+        align-self: end;
+        margin-bottom: 0;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        grid-column: 2;
+        margin-bottom: 0;
+    }
+
+    #contact-form textarea {
+        grid-row-end: span 3; /* Allows textarea to expand vertically if needed */
     }
 }
