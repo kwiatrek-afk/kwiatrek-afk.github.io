@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Sun Corridor Network</title>
+    <title>About Us - Sun Corridor Network</title>
     <link rel="stylesheet" href="scn.css">
 </head>
 <body>
@@ -24,37 +24,74 @@
 
     <main>
         <div class="container">
-            <section class="feature-section">
-                <div class="feature-container">
-                    <!-- Optional placeholder image; replace src or remove if not needed -->
-                    <img src="contact.png" alt="Contact Us" class="feature-image">
-                    <div class="feature-content">
-                        <div class="text-group">
-                            <h2>Contact Us</h2>
-                            <p>Have questions about our services, coverage, or how we can connect your institution? We'd love to hear from you. Fill out the form below, and our team in Tempe will get back to you promptly.</p>
-                        </div>
-                    </div>
+            <section class="info-section">
+            <div class="info-text">
+                <h2>About Us</h2>
+                <p>Sun Corridor Network (SCN) is a cutting-edge fiber optic network dedicated to advancing connectivity, research, and education at gigabit speeds across Arizona. Sponsored by the Arizona Board of Regents and connecting Arizona's three state universities—ASU, UA, and NAU—SCN serves over 60 institutions statewide, including K-12 schools, community colleges, and libraries. Based in Tempe, we bridge the digital divide by providing reliable, high-performance internet that empowers communities, fosters innovation, and supports economic growth for all Arizonans.</p>
+            </div>
+            <div class="info-images">
+                <img src="local.png" alt="Descriptive alt text for info image 1">
+                <img src="about_1.png" alt="Descriptive alt text for info image 2">
+                <img src="community.png" alt="Descriptive alt text for info image 3">
+                <img src="wifi.png" alt="Descriptive alt text for info image 4">
+            </div>
+        </section>
+
+            <section class="info-section" style="min-height: auto; margin-top: 0; grid-template-rows: auto auto; margin-bottom: 0;">
+                <div class="info-text" style="padding: 5px; display: flex; align-items: center; justify-content: center;">
+                    <h2 style="margin-bottom: 0;">SCN vs. Other Providers</h2>
                 </div>
+                <div class="info-images" style="padding: 5px;">
+                    <table style="width: 100%; border-collapse: collapse; font-family: 'SF Pro', Arial, sans-serif; line-height: 1.5; color: #333;">
+                        <thead>
+                            <tr style="background-color: #234D6E; color: white;">
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #E16E38;">Feature</th>
+                                <th style="padding: 12px; text-align: center; border-bottom: 2px solid #E16E38;">SCN</th>
+                                <th style="padding: 12px; text-align: center; border-bottom: 2px solid #E16E38;">Other Providers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ccc;">
+                                <td style="padding: 12px; font-weight: bold;">Pricing</td>
+                                <td style="padding: 12px; text-align: center; color: #28a745;">Tailored for institutions, E-Rate eligible, cost-effective for education/research</td>
+                                <td style="padding: 12px; text-align: center; color: #dc3545;">High consumer rates, contracts, hidden fees</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ccc;">
+                                <td style="padding: 12px; font-weight: bold;">Availability</td>
+                                <td style="padding: 12px; text-align: center; color: #28a745;">Statewide coverage in nearly every county, expanding to unserved areas</td>
+                                <td style="padding: 12px; text-align: center; color: #dc3545;">Limited to urban areas, rural gaps common</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ccc;">
+                                <td style="padding: 12px; font-weight: bold;">Community Involvement</td>
+                                <td style="padding: 12px; text-align: center; color: #28a745;">Deep ties to education, research, and digital equity initiatives</td>
+                                <td style="padding: 12px; text-align: center; color: #dc3545;">Minimal focus on local institutions or underserved communities</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ccc;">
+                                <td style="padding: 12px; font-weight: bold;">Locally Owned</td>
+                                <td style="padding: 12px; text-align: center; color: #28a745;">Yes - Arizona-based, community-driven</td>
+                                <td style="padding: 12px; text-align: center; color: #dc3545;">No - National/corporate chains</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; font-weight: bold;">Internet Speeds</td>
+                                <td style="padding: 12px; text-align: center; color: #28a745;">Gigabit and 100 Gbps+ for research/education</td>
+                                <td style="padding: 12px; text-align: center; color: #dc3545;">Up to 1 Gbps, often throttled for consumers</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
             </section>
 
             <section class="cta-section" style="text-align: center; margin-top: 20px;">
-                <form id="contact-form" action="#" method="post">
-                    <div class="form-content">
-                        <label for="name">Name <span class="required">(required)</span></label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-
-                        <label for="email">Email <span class="required">(required)</span></label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
-
-                        <button type="submit" id="submit" class="contact-button">Submit</button>
-                    </div>
-                </form>
+                <h2 style="color: #234D6E; margin-bottom: 20px;">Learn More About Our Impact</h2>
+                <div style="max-width: 100%; margin: 0 auto;">
+                    <!-- Native <video> tag for assignment compliance - easy to find via ID or comment -->
+                    <video id="native-video" controls width="100%" height="315" poster="video-poster.jpg"> <!-- Optional: poster= for thumbnail image -->
+                        <source src="impact.mp4" type="video/mp4">
+                        <source src="impact.webm" type="video/webm"> <!-- Fallback for broader support -->
+                        Your browser does not support the <video> tag. <a href="impact.mp4">Download the video</a>.
+                    </video>
+                </div>
             </section>
         </div>
     </main>
